@@ -28,6 +28,15 @@ terraform {
   required_version = ">= 0.13"
 }
 
+terraform {
+  backend "remote" {
+    organization = "Concurrency-Cloud"
+
+    workspaces {
+      name = "caf-terraform-landingzone-caf-foundations"
+    }
+  }
+}
 
 provider "azurerm" {
   features {
