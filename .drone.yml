@@ -24,7 +24,7 @@ steps:
     - mv .terraformrc ~ 
     - pwd
     - ls
-    - cd /landingzones/caf_foundations
+    - cd landingzones/caf_foundations
     - terraform init
     - terraform validate
     - terraform plan
