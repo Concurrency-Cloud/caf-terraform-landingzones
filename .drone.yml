@@ -22,7 +22,8 @@ steps:
       <<: *tf_vars
     commands: 
     - mv .terraformrc ~ 
-    - cd caf-terraform-landingzones  
+    - pwd
+    - ls
     - terraform init
     - terraform validate
     - terraform plan
