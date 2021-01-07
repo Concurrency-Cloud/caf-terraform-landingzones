@@ -1,23 +1,23 @@
 # Map of the remote data state
-variable lower_storage_account_name {}
-variable lower_container_name {}
-variable lower_resource_group_name {}
+// variable lower_storage_account_name {}
+// variable lower_container_name {}
+// variable lower_resource_group_name {}
 
-variable tfstate_subscription_id {
-  description = "This value is propulated by the rover. subscription id hosting the remote tfstates"
-}
-variable tfstate_storage_account_name {
-  description = "This value is propulated by the rover"
-}
-variable tfstate_container_name {
-  description = "This value is propulated by the rover"
-}
-variable tfstate_key {
-  description = "This value is propulated by the rover"
-}
-variable tfstate_resource_group_name {
-  description = "This value is propulated by the rover"
-}
+// variable tfstate_subscription_id {
+//   description = "This value is propulated by the rover. subscription id hosting the remote tfstates"
+// }
+// variable tfstate_storage_account_name {
+//   description = "This value is propulated by the rover"
+// }
+// variable tfstate_container_name {
+//   description = "This value is propulated by the rover"
+// }
+// variable tfstate_key {
+//   description = "This value is propulated by the rover"
+// }
+// variable tfstate_resource_group_name {
+//   description = "This value is propulated by the rover"
+// }
 
 variable landingzone {
   default = {
@@ -25,17 +25,17 @@ variable landingzone {
     global_settings_key = "launchpad"
     level               = "level1"
     key                 = "foundations"
-    tfstates = {
-      launchpad = {
-        level   = "lower"
-        tfstate = "caf_launchpad.tfstate"
-      }
-    }
+    // tfstates = {
+    //   launchpad = {
+    //     level   = "lower"
+    //     tfstate = "caf_launchpad.tfstate"
+    //   }
+    // }
   }
 }
 
-variable tenant_id {}
-variable rover_version {}
+// variable tenant_id {}
+// variable rover_version {}
 variable logged_user_objectId {
   default = null
 }
