@@ -7,7 +7,7 @@ module "foundations" {
   tags                        = local.tags
   diagnostics                 = local.remote.diagnostics
   global_settings             = local.global_settings
-  tfstates                    = local.tfstates
+//   tfstates                    = local.tfstates
   diagnostics_definition      = var.diagnostics_definition
   diagnostics_destinations    = var.diagnostics_destinations
   diagnostic_storage_accounts = var.diagnostic_storage_accounts
