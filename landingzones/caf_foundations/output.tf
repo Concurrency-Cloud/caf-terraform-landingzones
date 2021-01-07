@@ -18,10 +18,10 @@ output azuread_groups {
   value     = local.remote.azuread_groups
   sensitive = true
 }
-output tfstates {
-  value     = local.tfstates
-  sensitive = true
-}
+// output tfstates {
+//   value     = local.tfstates
+//   sensitive = true
+// }
 output keyvaults {
   value = map(
     var.landingzone.key,
