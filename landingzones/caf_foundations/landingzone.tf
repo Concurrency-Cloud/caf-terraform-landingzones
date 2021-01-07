@@ -3,7 +3,7 @@ module "foundations" {
   version = "~>4.21"
 
   current_landingzone_key     = var.landingzone.key
-  tenant_id                   = var.tenant_id
+//   tenant_id                   = var.tenant_id
   tags                        = local.tags
   diagnostics                 = local.remote.diagnostics
   global_settings             = local.global_settings
