@@ -1,0 +1,35 @@
+---
+kind: pipeline
+name: default
+
+globals:
+  - &tf_vars
+    ARM_CLIENT_ID:
+      from_secret: client_id
+    ARM_CLIENT_PASSWORD:
+      from_secret: spnsecret
+    ARM_TENANT_ID:
+      from_secret: tenant_id
+    ARM_SUBSCRIPTION_ID:
+      from_secret: subscription_id
+    TERRAFORM_TOKEN:
+      from_secret: terraform_token
+
+steps:
+  - name: Terraform
+    image: hashicorp/terraform
+    environment:
+      <<: *tf_vars
+    commands: 
+    - mv .terraformrc ~   
+    - terraform init
+    - terraform validate
+    - terraform plan
+    when:
+      branch:
+        - master
+      event:
+        - push
+trigger:
+  branch:
+    - master
